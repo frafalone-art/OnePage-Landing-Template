@@ -1,0 +1,303 @@
+/* =========================================================
+   PALETTE COLORI
+   Cambia questi valori per personalizzare tutto il sito:
+   il colore si applica automaticamente a header, hero,
+   footer, link attivi ecc.
+   ========================================================= */
+:root {
+    --accent: #4caf50;
+    --accent-dark: #2e7d32;
+    --accent-light: #a5d6a7;
+    --bg: #f8faf8;
+    --text: #263238;
+    --muted: #78909c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* ============ HEADER ============ */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 72px; /* deve restare uguale all'altezza del logo */
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: var(--text);
+    order: 1;
+}
+
+/* Riquadro del logo. Se il tuo logo ha già uno sfondo/forma
+   propria, puoi rimuovere il gradiente e il box-shadow. */
+.brand-mark {
+    width: 72px;
+    height: 72px;
+    border-radius: 0; /* metti "50%" se vuoi il logo tondo */
+    background: linear-gradient(135deg, var(--accent-dark), var(--accent-light));
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(46, 125, 50, 0.22);
+}
+
+.brand-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.brand p {
+    margin: 2px 0 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: center;
+    order: 2;
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    padding: 6px 0;
+    transition: color 0.2s ease;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 0;
+    background: var(--accent);
+    transition: height 0.2s ease;
+}
+
+.nav-link.active {
+    color: var(--accent-dark);
+}
+
+.nav-link.active::before {
+    height: 110%;
+}
+
+/* ============ LAYOUT GENERALE ============ */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 24px 40px;
+}
+
+section {
+    padding: 26px 0;
+    scroll-margin-top: 90px; /* evita che l'header sticky copra il titolo quando clicchi un link del menu */
+}
+
+.section-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+section h3 {
+    margin: 0 0 8px;
+    font-size: 1.4rem;
+    color: var(--accent-dark);
+}
+
+section p {
+    margin: 0;
+}
+
+/* ============ HERO (sezione iniziale) ============ */
+
+.hero {
+    background: linear-gradient(135deg, var(--accent-dark), var(--accent-light));
+    color: white;
+    padding: 44px 32px;
+    border-radius: 18px;
+    margin-bottom: 24px;
+    box-shadow: 0 12px 30px rgba(27, 94, 32, 0.16);
+    text-align: center;
+}
+
+.hero h2 {
+    margin: 0 0 10px;
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+}
+
+.hero p {
+    margin: 0 auto;
+    max-width: 720px;
+    font-size: 1.05rem;
+}
+
+.hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+/* Cornice bianca attorno all'immagine principale della hero.
+   Sostituisci "hero-banner.jpg" nell'HTML con la tua immagine:
+   idealmente un formato largo (es. 1200x700px). */
+.hero-banner-frame {
+    display: inline-block;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    border: 3px dashed rgba(255, 255, 255, 0.75);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.hero-banner-frame:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.95);
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 12px;
+    margin: 0;
+    display: block;
+}
+
+/* ============ SEZIONE CON IMMAGINE "STILE WORD" ============
+   Il testo scorre attorno all'immagine (float), come quando in
+   Word inserisci un'immagine con testo che l'avvolge.
+   Usala per qualsiasi sezione dove vuoi testo + immagine insieme. */
+
+.document-layout::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.document-layout h3 {
+    clear: both;
+}
+
+.document-text p {
+    margin: 0;
+    text-align: justify;
+}
+
+.document-image {
+    width: 280px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    float: right;
+    margin: 4px 0 12px 20px;
+    border-radius: 14px;
+}
+
+/* ============ FOOTER ============ */
+
+footer {
+    text-align: center;
+    padding: 20px 24px 32px;
+    color: white;
+    font-size: 0.95em;
+    background: var(--accent);
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.92);
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 900px) {
+    .document-image {
+        float: none;
+        width: 100%;
+        max-width: 280px;
+        margin: 16px 0 0;
+    }
+
+    .hero-inner {
+        flex-direction: column;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        margin-top: 18px;
+    }
+}
+
+@media (max-width: 700px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 32px 20px;
+    }
+}

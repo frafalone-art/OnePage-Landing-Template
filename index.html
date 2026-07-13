@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Cambia il titolo della scheda del browser -->
+    <title>Nome Attività</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="#home">
+                <!-- LOGO: "+" generico come placeholder. Sostituiscilo con il tuo
+                     logo mettendo <img src="assets/logo.png" alt="Logo"> al posto dello <span>. -->
+                <div class="brand-mark">
+                    <span>+</span>
+                </div>
+                <div>
+                    <!-- Nome dell'attività/progetto -->
+                    <h1>Nome Attività</h1>
+                    <!-- Breve slogan sotto al nome -->
+                    <p>Il tuo slogan qui</p>
+                </div>
+            </a>
+
+            <!-- Menu di navigazione: aggiungi/rimuovi voci a piacere,
+                 basta che l'href corrisponda all'id della sezione (#home, #about...) -->
+            <nav class="nav-links" aria-label="Navigazione principale">
+                <a class="nav-link active" href="#home">Home</a>
+                <a class="nav-link" href="#about">Chi siamo</a>
+                <a class="nav-link" href="#services">Servizi</a>
+                <a class="nav-link" href="#contact">Contatti</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- SEZIONE HERO: titolo forte + immagine principale -->
+        <section id="home" class="hero">
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <h2>Benvenuti nel nostro sito</h2>
+                    <p>Qui puoi raccontare la tua storia, mostrare i servizi e dare subito un'identità chiara al sito con un titolo forte, un logo accanto e un menu semplice da seguire.</p>
+                </div>
+                <!-- IMMAGINE PRINCIPALE: sostituisci "assets/hero-banner.jpg".
+                     Consigliato: immagine larga, es. 1200x700px. -->
+                <div class="hero-banner-frame">
+                    <img class="hero-image" src="assets/hero-banner.jpg" alt="Immagine principale del sito">
+                </div>
+            </div>
+        </section>
+
+        <!-- SEZIONE "CHI SIAMO": solo testo -->
+        <section id="about">
+            <div class="section-inner">
+                <h3>Chi siamo</h3>
+                <p>Questa sezione può ospitare una descrizione più completa della tua attività, della sua storia e dei valori che rappresenta. Il testo è disposto in modo ordinato, con un impatto visivo pulito e con il carattere giustificato, così da occupare bene lo spazio della pagina senza appesantire la lettura.</p>
+            </div>
+        </section>
+
+        <!-- SEZIONE "SERVIZI": solo testo -->
+        <section id="services">
+            <div class="section-inner">
+                <h3>Servizi</h3>
+                <p>Puoi inserire qui informazioni sui servizi che offri: cosa fai, come lo fai e perché un cliente dovrebbe sceglierti. Il layout è pensato per risultare minimale e leggibile, con il contenuto che occupa tutta la larghezza disponibile e resta ben centrato nella pagina.</p>
+            </div>
+        </section>
+
+        <!-- SEZIONE "CONTATTI": solo testo, personalizza con i tuoi recapiti -->
+        <section id="contact">
+            <div class="section-inner">
+                <h3>Contatti</h3>
+                <p>Inserisci qui indirizzo, recapiti, orari o un modulo semplice per farti contattare. Puoi anche aggiungere una mappa, foto reali o un'immagine di copertina in alto per rendere il sito ancora più curato.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Personalizza nome attività e indirizzo email -->
+        <p>© 2026 Nome Attività · <a href="mailto:email@tuosito.it">email@tuosito.it</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
