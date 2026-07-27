@@ -1,8 +1,8 @@
 /* =========================================================
-   PALETTE COLORI
-   Cambia questi valori per personalizzare tutto il sito:
-   il colore si applica automaticamente a header, hero,
-   footer, link attivi ecc.
+   COLOR PALETTE
+   Change these values to customize the whole site: the
+   color automatically applies to header, hero, footer,
+   active links, etc.
    ========================================================= */
 :root {
     --accent: #4caf50;
@@ -15,6 +15,44 @@
 
 * {
     box-sizing: border-box;
+}
+
+/* ============ LANGUAGE SWITCH ============
+   Don't edit these rules: they control the visibility of
+   .lang-en / .lang-it blocks based on the data-lang
+   attribute on the <html> tag (set by script.js). */
+
+html[data-lang="en"] .lang-it {
+    display: none;
+}
+
+html[data-lang="it"] .lang-en {
+    display: none;
+}
+
+.lang-switch {
+    display: flex;
+    gap: 4px;
+    background: #eef1f0;
+    border-radius: 8px;
+    padding: 3px;
+    order: 3;
+}
+
+.lang-switch button {
+    border: none;
+    background: transparent;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--muted);
+}
+
+.lang-switch button.active {
+    background: var(--accent);
+    color: white;
 }
 
 html {
@@ -48,7 +86,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    min-height: 72px; /* deve restare uguale all'altezza del logo */
+    min-height: 72px; /* must stay equal to the logo height */
 }
 
 .brand {
@@ -60,12 +98,12 @@ body {
     order: 1;
 }
 
-/* Riquadro del logo. Se il tuo logo ha già uno sfondo/forma
-   propria, puoi rimuovere il gradiente e il box-shadow. */
+/* Logo box. If your logo already has its own background/shape,
+   you can remove the gradient and the box-shadow. */
 .brand-mark {
     width: 72px;
     height: 72px;
-    border-radius: 0; /* metti "50%" se vuoi il logo tondo */
+    border-radius: 0; /* set to "50%" for a round logo */
     background: linear-gradient(135deg, var(--accent-dark), var(--accent-light));
     color: white;
     display: grid;
@@ -130,7 +168,7 @@ body {
     height: 110%;
 }
 
-/* ============ LAYOUT GENERALE ============ */
+/* ============ GENERAL LAYOUT ============ */
 
 main {
     max-width: 1100px;
@@ -140,7 +178,7 @@ main {
 
 section {
     padding: 26px 0;
-    scroll-margin-top: 90px; /* evita che l'header sticky copra il titolo quando clicchi un link del menu */
+    scroll-margin-top: 90px; /* keeps the sticky header from covering the title when a menu link is clicked */
 }
 
 .section-inner {
@@ -159,7 +197,7 @@ section p {
     margin: 0;
 }
 
-/* ============ HERO (sezione iniziale) ============ */
+/* ============ HERO (opening section) ============ */
 
 .hero {
     background: linear-gradient(135deg, var(--accent-dark), var(--accent-light));
@@ -193,9 +231,9 @@ section p {
     flex: 1;
 }
 
-/* Cornice bianca attorno all'immagine principale della hero.
-   Sostituisci "hero-banner.jpg" nell'HTML con la tua immagine:
-   idealmente un formato largo (es. 1200x700px). */
+/* White frame around the main hero image.
+   Replace "hero-banner.jpg" in the HTML with your own image:
+   ideally a wide format (e.g. 1200x700px). */
 .hero-banner-frame {
     display: inline-block;
     padding: 12px;
@@ -218,10 +256,10 @@ section p {
     display: block;
 }
 
-/* ============ SEZIONE CON IMMAGINE "STILE WORD" ============
-   Il testo scorre attorno all'immagine (float), come quando in
-   Word inserisci un'immagine con testo che l'avvolge.
-   Usala per qualsiasi sezione dove vuoi testo + immagine insieme. */
+/* ============ "WORD-STYLE" IMAGE SECTION ============
+   Text flows around the image (float), like inserting a
+   picture with wrap-around text in Word.
+   Use this for any section where you want text + image together. */
 
 .document-layout::after {
     content: "";
