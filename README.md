@@ -56,7 +56,8 @@ No build tools required. Clone the repo and open `index.html` directly in a brow
 python -m http.server 8000
 ```
 
-You can even find the web page on this link: 
+You can even find the web page on this link: https://frafalone-art.github.io/OnePage-Landing-Template/
+
 ## ⚠️ Disclaimer
 
 This is a template intended as a starting point for personal or small-business websites. It's not tied to any specific business — replace all placeholder text and images before publishing.
