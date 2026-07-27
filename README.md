@@ -10,6 +10,7 @@ A clean, single-page website template built with plain HTML, CSS and JavaScript 
 ## 🚀 Features
 
 - Sticky header with logo + navigation menu
+- **Built-in EN/IT language switch** (English by default), no page reload, remembers the visitor's choice
 - Scroll-spy navigation (the active section is highlighted automatically while scrolling)
 - Hero section with title, description and framed banner image
 - "Document style" section where text wraps around an image, like in Word
@@ -41,10 +42,11 @@ template-site/
        --muted: #6b7280;
    }
    ```
-2. **Text and content** — everything is in `index.html`, with Italian comments marking what to change (title, tagline, section text, contact info).
+2. **Text and content** — everything is in `index.html`, with comments marking what to change (title, tagline, section text, contact info).
 3. **Logo** — by default the header shows a "+" placeholder mark. To use your own logo, replace the `<span>+</span>` in `index.html` with `<img src="assets/logo.png" alt="Logo">`.
 4. **Images** — the hero section has a dashed placeholder frame ready for an image: drop your file into `assets/` and update the `src` of `hero-banner.jpg`.
 5. **Sections** — add or remove `<section>` blocks in `index.html`; just make sure each menu link's `href="#id"` matches a section `id`. A reusable "text wraps around image" layout (`.document-layout` / `.document-image` in `style.css`) is available if you want to add an image inside any section, Word-style.
+6. **Languages** — every piece of translatable text has two versions side by side, marked with `class="lang-en"` and `class="lang-it"`. Edit both, or duplicate the pattern to add a third language (also add a matching button in the `.lang-switch` block and update `script.js`). English is the default language; change it by editing `data-lang="en"` on the `<html>` tag.
 
 ## ▶️ Usage
 
