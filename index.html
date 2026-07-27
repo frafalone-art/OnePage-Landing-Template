@@ -1,86 +1,110 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en" data-lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Cambia il titolo della scheda del browser -->
-    <title>Nome Attività</title>
+    <!-- Change the browser tab title -->
+    <title>Business Name</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="site-header">
         <div class="header-inner">
             <a class="brand" href="#home">
-                <!-- LOGO: "+" generico come placeholder. Sostituiscilo con il tuo
-                     logo mettendo <img src="assets/logo.png" alt="Logo"> al posto dello <span>. -->
+                <!-- LOGO: generic "+" placeholder. Replace it with your own logo
+                     by swapping the <span> for <img src="assets/logo.png" alt="Logo">. -->
                 <div class="brand-mark">
                     <span>+</span>
                 </div>
                 <div>
-                    <!-- Nome dell'attività/progetto -->
-                    <h1>Nome Attività</h1>
-                    <!-- Breve slogan sotto al nome -->
-                    <p>Il tuo slogan qui</p>
+                    <!-- Business/project name — usually kept the same in every language -->
+                    <h1>Business Name</h1>
+                    <!-- Tagline: one version per language -->
+                    <p class="lang-en">Your tagline here</p>
+                    <p class="lang-it">Il tuo slogan qui</p>
                 </div>
             </a>
 
-            <!-- Menu di navigazione: aggiungi/rimuovi voci a piacere,
-                 basta che l'href corrisponda all'id della sezione (#home, #about...) -->
-            <nav class="nav-links" aria-label="Navigazione principale">
-                <a class="nav-link active" href="#home">Home</a>
-                <a class="nav-link" href="#about">Chi siamo</a>
-                <a class="nav-link" href="#services">Servizi</a>
-                <a class="nav-link" href="#contact">Contatti</a>
+            <!-- Navigation menu: each item has an EN and an IT version.
+                 Add/remove items as you like, just make sure each href
+                 matches a section id (#home, #about...) and that you
+                 always keep the lang-en / lang-it pair together. -->
+            <nav class="nav-links" aria-label="Main navigation">
+                <a class="nav-link active lang-en" href="#home">Home</a>
+                <a class="nav-link active lang-it" href="#home">Home</a>
+                <a class="nav-link lang-en" href="#about">About</a>
+                <a class="nav-link lang-it" href="#about">Chi siamo</a>
+                <a class="nav-link lang-en" href="#services">Services</a>
+                <a class="nav-link lang-it" href="#services">Servizi</a>
+                <a class="nav-link lang-en" href="#contact">Contact</a>
+                <a class="nav-link lang-it" href="#contact">Contatti</a>
             </nav>
+
+            <!-- LANGUAGE SWITCH: works out of the box, no need to edit.
+                 To add another language, duplicate a button here and
+                 update script.js accordingly. -->
+            <div class="lang-switch" aria-label="Select language">
+                <button type="button" data-set-lang="en" class="active">EN</button>
+                <button type="button" data-set-lang="it">IT</button>
+            </div>
         </div>
     </header>
 
     <main>
-        <!-- SEZIONE HERO: titolo forte + immagine principale -->
+        <!-- HERO SECTION: strong headline + main image -->
         <section id="home" class="hero">
             <div class="hero-inner">
                 <div class="hero-content">
-                    <h2>Benvenuti nel nostro sito</h2>
-                    <p>Qui puoi raccontare la tua storia, mostrare i servizi e dare subito un'identità chiara al sito con un titolo forte, un logo accanto e un menu semplice da seguire.</p>
+                    <h2 class="lang-en">Welcome to our website</h2>
+                    <h2 class="lang-it">Benvenuti nel nostro sito</h2>
+                    <p class="lang-en">Tell your story here, showcase your services and give your site a clear identity right away, with a strong headline, your logo alongside it, and a simple menu to follow.</p>
+                    <p class="lang-it">Qui puoi raccontare la tua storia, mostrare i servizi e dare subito un'identità chiara al sito con un titolo forte, un logo accanto e un menu semplice da seguire.</p>
                 </div>
-                <!-- IMMAGINE PRINCIPALE: sostituisci "assets/hero-banner.jpg".
-                     Consigliato: immagine larga, es. 1200x700px. -->
+                <!-- MAIN IMAGE: replace "assets/hero-banner.jpg".
+                     Recommended: a wide image, e.g. 1200x700px. -->
                 <div class="hero-banner-frame">
-                    <img class="hero-image" src="assets/hero-banner.jpg" alt="Immagine principale del sito">
+                    <img class="hero-image" src="assets/hero-banner.jpg" alt="Main site image">
                 </div>
             </div>
         </section>
 
-        <!-- SEZIONE "CHI SIAMO": solo testo -->
+        <!-- "ABOUT" SECTION: text only. Every block has a lang-en and a
+             lang-it version — always keep the pair together. -->
         <section id="about">
             <div class="section-inner">
-                <h3>Chi siamo</h3>
-                <p>Questa sezione può ospitare una descrizione più completa della tua attività, della sua storia e dei valori che rappresenta. Il testo è disposto in modo ordinato, con un impatto visivo pulito e con il carattere giustificato, così da occupare bene lo spazio della pagina senza appesantire la lettura.</p>
+                <h3 class="lang-en">About</h3>
+                <h3 class="lang-it">Chi siamo</h3>
+                <p class="lang-en">This section can hold a fuller description of your business, its story, and the values it stands for. The text is laid out cleanly, with a tidy visual impact and justified alignment, so it fills the page nicely without weighing down the reading.</p>
+                <p class="lang-it">Questa sezione può ospitare una descrizione più completa della tua attività, della sua storia e dei valori che rappresenta. Il testo è disposto in modo ordinato, con un impatto visivo pulito e con il carattere giustificato, così da occupare bene lo spazio della pagina senza appesantire la lettura.</p>
             </div>
         </section>
 
-        <!-- SEZIONE "SERVIZI": solo testo -->
+        <!-- "SERVICES" SECTION: text only -->
         <section id="services">
             <div class="section-inner">
-                <h3>Servizi</h3>
-                <p>Puoi inserire qui informazioni sui servizi che offri: cosa fai, come lo fai e perché un cliente dovrebbe sceglierti. Il layout è pensato per risultare minimale e leggibile, con il contenuto che occupa tutta la larghezza disponibile e resta ben centrato nella pagina.</p>
+                <h3 class="lang-en">Services</h3>
+                <h3 class="lang-it">Servizi</h3>
+                <p class="lang-en">You can add information here about the services you offer: what you do, how you do it, and why a customer should choose you. The layout is designed to be minimal and readable, with content that spans the full available width while staying well centered on the page.</p>
+                <p class="lang-it">Puoi inserire qui informazioni sui servizi che offri: cosa fai, come lo fai e perché un cliente dovrebbe sceglierti. Il layout è pensato per risultare minimale e leggibile, con il contenuto che occupa tutta la larghezza disponibile e resta ben centrato nella pagina.</p>
             </div>
         </section>
 
-        <!-- SEZIONE "CONTATTI": solo testo, personalizza con i tuoi recapiti -->
+        <!-- "CONTACT" SECTION: text only, fill in with your own details -->
         <section id="contact">
             <div class="section-inner">
-                <h3>Contatti</h3>
-                <p>Inserisci qui indirizzo, recapiti, orari o un modulo semplice per farti contattare. Puoi anche aggiungere una mappa, foto reali o un'immagine di copertina in alto per rendere il sito ancora più curato.</p>
+                <h3 class="lang-en">Contact</h3>
+                <h3 class="lang-it">Contatti</h3>
+                <p class="lang-en">Add your address, phone, hours, or a simple contact form here. You can also add a map, real photos, or a cover image at the top to make the site feel even more polished.</p>
+                <p class="lang-it">Inserisci qui indirizzo, recapiti, orari o un modulo semplice per farti contattare. Puoi anche aggiungere una mappa, foto reali o un'immagine di copertina in alto per rendere il sito ancora più curato.</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <!-- Personalizza nome attività e indirizzo email -->
-        <p>© 2026 Nome Attività · <a href="mailto:email@tuosito.it">email@tuosito.it</a></p>
+        <!-- Customize business name and email address -->
+        <p>© 2026 Business Name · <a href="mailto:email@yoursite.com">email@yoursite.com</a></p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
-<!-- Template by Francesco Falone - github.com/frafalone-art -->
