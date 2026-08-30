@@ -17,6 +17,7 @@ A clean, single-page website template built with plain HTML, CSS and JavaScript 
 - Fully responsive layout (mobile, tablet, desktop)
 - Single color palette controlled via CSS variables — change one value, the whole site updates
 - Zero dependencies: just open `index.html` in a browser
+- Bilingual support through a toggle (default set as IT/EN)
 
 ## 📁 Project structure
 
