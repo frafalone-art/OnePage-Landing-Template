@@ -65,7 +65,7 @@ This is a template intended as a starting point for personal or small-business w
 
 ## 👨‍💻 Author
 
-Francesco Falone — personal project / template for reuse in future web projects.
+Francesco Falone — template for reuse in future web projects.
 
 ## 📄 License
 
